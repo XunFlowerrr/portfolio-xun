@@ -152,8 +152,6 @@ export const projectDetails = [
 export const testimonials = [
   {
     quote: "Front-end",
-    // name: "Michael Johnson",
-    // title: "Director of AlphaStream Technologies",
     icons: [
       "/re.svg",
       "/next.svg",

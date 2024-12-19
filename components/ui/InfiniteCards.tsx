@@ -12,8 +12,6 @@ export const InfiniteMovingCards = ({
 }: {
   items: {
     quote: string;
-    name: string;
-    title: string;
     icons: string[];
     iconsName: string[];
   }[];
