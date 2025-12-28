@@ -58,6 +58,7 @@ const ProjectCarousel = ({ images }: ProjectCarouselProps) => {
   }, [api]);
 
   const orientation = isMobile ? "horizontal" : "vertical";
+  const showArrows = images.length > 1;
 
   return (
     <Carousel
@@ -87,10 +88,16 @@ const ProjectCarousel = ({ images }: ProjectCarouselProps) => {
           </CarouselItem>
         ))}
       </CarouselContent>
-      <CarouselPrevious
-        className={cn("hidden md:flex", !isMobile && "-top-12")}
-      />
-      <CarouselNext className={cn("hidden md:flex", !isMobile && "bottom-2")} />
+      {showArrows && (
+        <>
+          <CarouselPrevious
+            className={cn("hidden md:flex", !isMobile && "-top-12")}
+          />
+          <CarouselNext
+            className={cn("hidden md:flex", !isMobile && "bottom-2")}
+          />
+        </>
+      )}
     </Carousel>
   );
 };

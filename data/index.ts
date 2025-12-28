@@ -48,7 +48,7 @@ export const projects = [
     longDescription:
       "Imaginify is a cutting-edge AI-manipulated image platform designed to empower users with advanced image editing capabilities. Leveraging the latest technologies, Imaginify offers a seamless user experience for transforming images with AI algorithms. It includes features like background removal, image restoration, and generative fill.",
     img: "/portfolio-xun/ima.png",
-    images: ["/portfolio-xun/ima.png", "/portfolio-xun/b1.svg"],
+    images: ["/portfolio-xun/ima.png"],
     iconLists: [
       "/portfolio-xun/next.svg",
       "/portfolio-xun/tail.svg",
@@ -66,7 +66,7 @@ export const projects = [
     longDescription:
       "YENKAR is a web-application that allows users rent and lend cars. It is a full-stack application that uses the latest technologies to provide a seamless user experience. Users can list their cars for rent or browse available cars to rent.",
     img: "/portfolio-xun/yen.png",
-    images: ["/portfolio-xun/yen.png", "/portfolio-xun/b1.svg"],
+    images: ["/portfolio-xun/yen.png"],
     iconLists: [
       "/portfolio-xun/next.svg",
       "/portfolio-xun/nodejs-icon.svg",
@@ -93,7 +93,7 @@ export const projects = [
     longDescription:
       "CoinRankingApp is an Android application that allows users to track the latest cryptocurrency prices and top performing cryptocurrencies. The app uses the CoinRanking API to fetch cryptocurrency data and displays it in a user-friendly interface. Users can view detailed information about each cryptocurrency.",
     img: "/portfolio-xun/coin.png",
-    images: ["/portfolio-xun/coin.png", "/portfolio-xun/b1.svg"],
+    images: ["/portfolio-xun/coin.png"],
     iconLists: ["/portfolio-xun/android.png", "/portfolio-xun/kotlin.png"],
     link: "https://github.com/XunFlowerrr/CoinRankingApp",
     tags: ["Android", "Kotlin"],
@@ -105,7 +105,7 @@ export const projects = [
     longDescription:
       "The Weather Forecast App is an application that provides users with up-to-date weather information for different locations. It allows users to check the current weather conditions as well as the forecast for the upcoming days. It features a clean and intuitive user interface.",
     img: "/portfolio-xun/fore.png",
-    images: ["/portfolio-xun/fore.png", "/portfolio-xun/b1.svg"],
+    images: ["/portfolio-xun/fore.png"],
     iconLists: ["/portfolio-xun/android.png", "/portfolio-xun/kotlin.png"],
     link: "https://github.com/XunFlowerrr/Weather-Forecast",
     tags: ["Android", "Kotlin"],
@@ -142,7 +142,7 @@ export const projects = [
     longDescription:
       "Beneath the ruin is a game about exploring a ruined city. The game is a 2D game with a top-down perspective. The player will be able to explore the ruin and fight monsters. It features various levels, enemies, and items to collect.",
     img: "/portfolio-xun/be_m.png",
-    images: ["/portfolio-xun/be_m.png", "/portfolio-xun/b1.svg"],
+    images: ["/portfolio-xun/be_m.png", "/portfolio-xun/be_i.png"],
     iconLists: ["/portfolio-xun/java.svg"],
     link: "https://github.com/XunFlowerrr/Beneath-the-ruin",
     tags: ["Java", "Game Development"],
@@ -193,7 +193,7 @@ export const projects = [
     longDescription:
       "Integrated IoT with electric meter to send data to the cloud and display it on the web. It allows users to monitor their electricity consumption in real-time and view historical data.",
     img: "/portfolio-xun/lora.jpeg",
-    images: ["/portfolio-xun/lora.jpeg", "/portfolio-xun/b1.svg"],
+    images: ["/portfolio-xun/lora.jpeg"],
     iconLists: ["/portfolio-xun/arduino.png", "/portfolio-xun/raspberry.png"],
     link: "https://github.com/XunFlowerrr/CPF",
     tags: ["IoT", "Arduino", "Raspberry Pi"],
@@ -207,7 +207,7 @@ export const projects = [
     longDescription:
       "YAKINIKU is a website for learning about yakiniku. This site will provide you with a variety of cow breeds along with valuable information. It includes details about each cut, such as its origin and cooking recommendations. Additionally, we offer a mini-game for yakiniku enthusiasts where you can select a beef cut, read the cooking guide, start grilling, and receive a cooking result to gauge your skills.",
     img: "/portfolio-xun/yaki.png",
-    images: ["/portfolio-xun/yaki.png", "/portfolio-xun/b1.svg"],
+    images: ["/portfolio-xun/yaki.png"],
     iconLists: [
       "/portfolio-xun/javascript.png",
       "/portfolio-xun/html.png",
