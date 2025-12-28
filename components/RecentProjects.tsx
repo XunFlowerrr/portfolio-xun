@@ -60,8 +60,8 @@ const RecentProjects = () => {
               key={item.id}
             >
               <PinContainer
-                title={item.link}
-                href={`/projects/${item.id}`} // Link remains the same
+                title="View more info"
+                href={`/projects/${item.id}`}
               >
                 <div
                   className="relative flex items-center justify-center sm:w-96 w-[80vw] overflow-hidden h-[20vh] lg:h-[30vh] mb-10 cursor-pointer"
@@ -116,10 +116,8 @@ const RecentProjects = () => {
                     ))}
                   </div>
                   <div className="flex justify-center items-center">
-                    <p className="flex lg:text-xl md:text-xs text-sm text-purple">
-                      Github Repo
-                    </p>
-                    <FaLocationArrow className="ms-3" color="#CBACF9" />
+                    <p className="flex lg:text-xl md:text-xs text-sm text-purple"></p>
+                    {/* <FaLocationArrow className="ms-3" color="#CBACF9" /> */}
                   </div>
                 </div>
               </PinContainer>

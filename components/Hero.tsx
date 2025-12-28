@@ -52,7 +52,7 @@ const Hero = () => {
            *  change md:text-6xl, add more responsive code
            */}
           <TextGenerateEffect
-            words="Nerver stop learning and GROWING"
+            words="A Continuous Journey of Learning, Coding, and Creating"
             className="text-center text-[40px] md:text-5xl lg:text-6xl"
           />
 

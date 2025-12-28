@@ -10,6 +10,7 @@ import { BackgroundGradientAnimation } from "./GradientBg";
 import GridGlobe from "./GridGlobe";
 import animationData from "@/data/confetti.json";
 import MagicButton from "../MagicButton";
+import { Avatar, AvatarImage, AvatarFallback } from "./avatar";
 
 export const BentoGrid = ({
   className,
@@ -140,7 +141,14 @@ export const BentoGridItem = ({
           {id === 3 && <GridGlobe />}
 
           {/* Tech stack list div */}
-          {id === 2 && <></>}
+          {id === 2 && (
+            <div className="flex items-center justify-end absolute right-5 top-1/2 -translate-y-1/2">
+              <Avatar className="h-28 w-28 lg:h-32 lg:w-32 border-2 border-white/[0.2]">
+                <AvatarImage src="/portfolio-xun/profile.jpg" alt="Profile" />
+                <AvatarFallback>TY</AvatarFallback>
+              </Avatar>
+            </div>
+          )}
           {id === 6 && (
             <div className="mt-5 relative">
               {/* button border magic from tailwind css buttons  */}

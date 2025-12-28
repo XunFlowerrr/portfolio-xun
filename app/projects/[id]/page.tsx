@@ -3,13 +3,8 @@ import Image from "next/image";
 import { FaLocationArrow } from "react-icons/fa6";
 import MagicButton from "@/components/MagicButton";
 import { FloatingNav } from "@/components/ui/FloatingNavbar";
-import {
-  Carousel,
-  CarouselContent,
-  CarouselItem,
-  CarouselNext,
-  CarouselPrevious,
-} from "@/components/ui/carousel";
+import ProjectCarousel from "@/components/ProjectCarousel";
+import ReactMarkdown from "react-markdown";
 
 export async function generateStaticParams() {
   return projects.map((project) => ({
@@ -41,15 +36,22 @@ const ProjectDetails = ({ params }: { params: { id: string } }) => {
         <FloatingNav navItems={navItems} />
 
         <div className="grid grid-cols-1 lg:grid-cols-2 gap-16 w-full mt-20">
-          {/* LEFT COLUMN: Text Content */}
-          <div className="flex flex-col justify-center gap-8">
+          {/* RIGHT COLUMN (Mobile: Top, Desktop: Right) - Carousel */}
+          <div className="flex items-center justify-center h-full w-full order-1 lg:order-2">
+            <ProjectCarousel images={displayImages} />
+          </div>
+
+          {/* LEFT COLUMN (Mobile: Bottom, Desktop: Left) - Text Content */}
+          <div className="flex flex-col justify-center gap-8 order-2 lg:order-1">
             <h1 className="text-4xl md:text-5xl font-bold text-white">
               {project.title}
             </h1>
 
-            <p className="text-white-100 leading-relaxed text-lg">
-              {project.longDescription || project.des}
-            </p>
+            <div className="text-white-100 leading-relaxed text-lg prose prose-invert prose-headings:text-white prose-p:text-white-100 prose-strong:text-white prose-li:text-white-100 max-w-none">
+              <ReactMarkdown>
+                {project.longDescription || project.des}
+              </ReactMarkdown>
+            </div>
 
             <div className="flex flex-col gap-4">
               <h3 className="text-xl font-semibold text-purple">Tech Stack</h3>
@@ -80,37 +82,6 @@ const ProjectDetails = ({ params }: { params: { id: string } }) => {
                 />
               </a>
             </div>
-          </div>
-
-          {/* RIGHT COLUMN: Vertical Carousel */}
-          <div className="flex items-center justify-center h-full w-full">
-            <Carousel
-              opts={{
-                align: "start",
-              }}
-              orientation="vertical"
-              className="w-full max-w-md h-[600px]"
-            >
-              <CarouselContent className="-mt-1 h-[600px]">
-                {displayImages.map((img, index) => (
-                  <CarouselItem key={index} className="pt-1 md:basis-1/2">
-                    <div className="p-1 h-full">
-                      <div className="relative w-full h-full rounded-3xl overflow-hidden border border-white/[0.1] bg-[#13162D] aspect-[9/16] lg:aspect-auto min-h-[300px]">
-                        <Image
-                          src={img}
-                          alt={`image-${index}`}
-                          layout="fill"
-                          objectFit="cover"
-                          className="rounded-3xl hover:scale-105 transition-transform duration-500"
-                        />
-                      </div>
-                    </div>
-                  </CarouselItem>
-                ))}
-              </CarouselContent>
-              <CarouselPrevious />
-              <CarouselNext />
-            </Carousel>
           </div>
         </div>
       </div>

@@ -10,7 +10,7 @@ export const gridItems = [
     id: 1,
     title: "Computer engineering student.",
     description:
-      "This is showcase of my projects and experiences during my journey as a ",
+      "This is a showcase of my projects and experiences during my journey as a ",
     className: "lg:col-span-3 md:col-span-6 md:row-span-3 lg:min-h-[60vh]",
     imgClassName: "w-full h-full",
     titleClassName: "justify-end ",
@@ -24,7 +24,7 @@ export const gridItems = [
     className: "lg:col-span-2 md:col-span-3 md:row-span-2",
     imgClassName: "w-full h-full",
     titleClassName: "justify-center",
-    img: "/portfolio-xun/profile_right.png",
+    img: "",
     spareImg: "",
   },
   {
@@ -40,6 +40,7 @@ export const gridItems = [
 ];
 
 export const projects = [
+  // --- Web Application ---
   {
     id: 1,
     title: "Imaginify",
@@ -83,6 +84,8 @@ export const projects = [
       "React",
     ],
   },
+
+  // --- Mobile Application ---
   {
     id: 3,
     title: "Coin Ranking App",
@@ -98,21 +101,46 @@ export const projects = [
   {
     id: 4,
     title: "Weather Forecast App",
-    des: "The Weather Forecast App is a application that provides users with up-to-date weather information for different locations. It allows users to check the current weather conditions as well as the forecast for the upcoming days.",
+    des: "The Weather Forecast App is an application that provides users with up-to-date weather information for different locations. It allows users to check the current weather conditions as well as the forecast for the upcoming days.",
     longDescription:
-      "The Weather Forecast App is a application that provides users with up-to-date weather information for different locations. It allows users to check the current weather conditions as well as the forecast for the upcoming days. It features a clean and intuitive user interface.",
+      "The Weather Forecast App is an application that provides users with up-to-date weather information for different locations. It allows users to check the current weather conditions as well as the forecast for the upcoming days. It features a clean and intuitive user interface.",
     img: "/portfolio-xun/fore.png",
     images: ["/portfolio-xun/fore.png", "/portfolio-xun/b1.svg"],
     iconLists: ["/portfolio-xun/android.png", "/portfolio-xun/kotlin.png"],
     link: "https://github.com/XunFlowerrr/Weather-Forecast",
     tags: ["Android", "Kotlin"],
   },
+
+  // --- Data Science / AI ---
+  {
+    id: 6,
+    title: "Tiny Stable Diffusion",
+    des: "A lightweight Stable Diffusion U-Net model (~75M parameters) trained from scratch on the COCO dataset to explore efficient image generation.",
+    longDescription:
+      "This project focuses on training a relatively small Stable Diffusion U-Net model (~75M parameters) from scratch using the COCO 2014 dataset. It leverages pre-trained VAE and CLIP components and utilizes mixed-precision training with 'accelerate'. The project includes utilities for visualizing checkpoint evolution and generating prompt grids to analyze the model's learning progress.",
+    img: "/portfolio-xun/tiny-stable-01.png",
+    images: [
+      "/portfolio-xun/tiny-stable-01.png",
+      "/portfolio-xun/tiny-stable-02.png",
+      "/portfolio-xun/tiny-stable-03.png",
+      "/portfolio-xun/tiny-stable-04.png",
+      "/portfolio-xun/tiny-stable-05.png",
+    ],
+    iconLists: [
+      "/portfolio-xun/python.png",
+      "/portfolio-xun/pytorch-svgrepo-com.svg",
+    ],
+    link: "https://github.com/XunFlowerrr/image-gen-tiny-stable-diffusion",
+    tags: ["AI/ML models", "Python", "Data Science", "PyTorch"],
+  },
+
+  // --- Game Development ---
   {
     id: 5,
     title: "Beneath the Ruin",
-    des: "Beneth the ruin is a game about exploring a ruined city. The game is a 2D game with a top-down perspective. The player will be able to explore the ruin and fight monsters.",
+    des: "Beneath the ruin is a game about exploring a ruined city. The game is a 2D game with a top-down perspective. The player will be able to explore the ruin and fight monsters.",
     longDescription:
-      "Beneth the ruin is a game about exploring a ruined city. The game is a 2D game with a top-down perspective. The player will be able to explore the ruin and fight monsters. It features various levels, enemies, and items to collect.",
+      "Beneath the ruin is a game about exploring a ruined city. The game is a 2D game with a top-down perspective. The player will be able to explore the ruin and fight monsters. It features various levels, enemies, and items to collect.",
     img: "/portfolio-xun/be_m.png",
     images: ["/portfolio-xun/be_m.png", "/portfolio-xun/b1.svg"],
     iconLists: ["/portfolio-xun/java.svg"],
@@ -120,17 +148,58 @@ export const projects = [
     tags: ["Java", "Game Development"],
   },
   {
-    id: 6,
-    title: "ClassiPaper",
-    des: "ML model that classifies papers into different categories based on their content. ",
+    id: 9,
+    title: "Mecha Fight",
+    des: "Mecha Fight is a 3D action game development using OpenGL and C++.",
     longDescription:
-      "ML model that classifies papers into different categories based on their content. It uses natural language processing techniques to analyze the text and predict the category. The model is trained on a large dataset of academic papers.",
-    img: "/portfolio-xun/class.png",
-    images: ["/portfolio-xun/class.png", "/portfolio-xun/b1.svg"],
-    iconLists: ["/portfolio-xun/python.png"],
-    link: "https://github.com/Taihenc/ClassiPaper",
-    tags: ["AI/ML models", "Python", "Data Science"],
+      "Mecha Fight is a 3D action game development, Designed to demonstrate the fundamentals of computer graphics, this project utilizes Basic OpenGL to render an immersive combat environment. Players pilot a high-tech Mecha unit, tasked with defending humanity against an onslaught of hostile Alien Mechs.",
+    img: "/portfolio-xun/mecha-fight-01.png",
+    images: [
+      "/portfolio-xun/mecha-fight-01.png",
+      "/portfolio-xun/mecha-fight-02.jpg",
+      "/portfolio-xun/mecha-fight-03.jpg",
+    ],
+    iconLists: ["/portfolio-xun/cpp.svg", "/portfolio-xun/opengl.svg"],
+    link: "https://github.com/XunFlowerrr/Mecha-Fight",
+    tags: ["C++", "OpenGL", "Game Development"],
   },
+
+  // --- IoT (Internet of Things) ---
+  {
+    id: 10,
+    title: "CoreLock IoT",
+    des: "Smart safety box featuring multi-sensor intrusion detection, Face Recognition unlocking, and real-time monitoring via a cloud dashboard.",
+    longDescription:
+      "CoreLock transforms passive security into a proactive protection system. It utilizes a multi-sensor array (Gyroscope, Magnetic, Hit sensors) to detect tampering and movement. The system offers dual-access via Face Recognition and manual Joystick code. Integrated with AWS and MQTT, it streams data to a Next.js dashboard, allowing users to view real-time 3D orientation, sensor trends, and intrusion alerts instantly.",
+    img: "/portfolio-xun/core-lock-01.jpeg",
+    images: [
+      "/portfolio-xun/core-lock-01.jpeg",
+      "/portfolio-xun/core-lock-02.png",
+      "/portfolio-xun/core-lock-03.png",
+    ],
+    iconLists: [
+      "/portfolio-xun/next.svg",
+      "/portfolio-xun/raspberry.png",
+      "/portfolio-xun/nodejs-icon.svg",
+      "/portfolio-xun/dock.svg",
+    ],
+    link: "https://github.com/XunFlowerrr/safebox",
+    tags: ["IoT", "Embedded System", "Next.js", "MQTT", "AWS"],
+  },
+  {
+    id: 8,
+    title: "IOT Smart Electric Meter",
+    des: "Integrated IoT with electric meter to send data to the cloud and display it on the web.",
+    longDescription:
+      "Integrated IoT with electric meter to send data to the cloud and display it on the web. It allows users to monitor their electricity consumption in real-time and view historical data.",
+    img: "/portfolio-xun/lora.jpeg",
+    images: ["/portfolio-xun/lora.jpeg", "/portfolio-xun/b1.svg"],
+    iconLists: ["/portfolio-xun/arduino.png", "/portfolio-xun/raspberry.png"],
+    link: "https://github.com/XunFlowerrr/CPF",
+    tags: ["IoT", "Arduino", "Raspberry Pi"],
+  },
+
+  // --- Design ---
   {
     id: 7,
     title: "YAKINIKU",
@@ -149,34 +218,6 @@ export const projects = [
     link: "https://github.com/Taihenc/YAKINIKU",
     tags: ["Web Development", "Design"],
   },
-  {
-    id: 8,
-    title: "IOT Smart Electric Meter",
-    des: "Intregated IoT with electric meter to send data to the cloud and display it on the web.",
-    longDescription:
-      "Intregated IoT with electric meter to send data to the cloud and display it on the web. It allows users to monitor their electricity consumption in real-time and view historical data.",
-    img: "/portfolio-xun/lora.jpeg",
-    images: ["/portfolio-xun/lora.jpeg", "/portfolio-xun/b1.svg"],
-    iconLists: ["/portfolio-xun/arduino.png", "/portfolio-xun/raspberry.png"],
-    link: "https://github.com/XunFlowerrr/CPF",
-    tags: ["IoT", "Arduino", "Raspberry Pi"],
-  },
-];
-
-export const projectDetails = [
-  {
-    id: 1,
-    detailedDescription: "Detailed description of Imaginify...",
-    images: ["/ima1.png", "/ima2.png"],
-    // Add more detailed fields as needed
-  },
-  {
-    id: 2,
-    detailedDescription: "Detailed description of Yoom...",
-    images: ["/yen1.png", "/yen2.png"],
-    // Add more detailed fields as needed
-  },
-  // ...details for other projects...
 ];
 
 export const testimonials = [
@@ -214,18 +255,14 @@ export const testimonials = [
     iconsName: ["Android", "Kotlin"],
   },
   {
-    quote: "Database",
-    icons: ["/portfolio-xun/mongodb.svg", "/portfolio-xun/postgresql.svg"],
-    iconsName: ["MongoDB", "PostgreSQL"],
-  },
-  {
     quote: "Data Science",
     icons: [
       "/portfolio-xun/python.png",
       "/portfolio-xun/pandas.svg",
       "/portfolio-xun/scikit-learn.svg",
+      "/portfolio-xun/pytorch-svgrepo-com.svg",
     ],
-    iconsName: ["Python", "Pandas", "Scikit-learn"],
+    iconsName: ["Python", "Pandas", "Scikit-learn", "Pytorch"],
   },
   {
     quote: "IOT",
@@ -234,46 +271,20 @@ export const testimonials = [
   },
 ];
 
-export const companies = [
-  {
-    id: 1,
-    name: "cloudinary",
-    img: "/cloud.svg",
-    nameImg: "/cloudName.svg",
-  },
-  {
-    id: 2,
-    name: "appwrite",
-    img: "/app.svg",
-    nameImg: "/appName.svg",
-  },
-  {
-    id: 3,
-    name: "HOSTINGER",
-    img: "/host.svg",
-    nameImg: "/hostName.svg",
-  },
-  {
-    id: 4,
-    name: "stream",
-    img: "/s.svg",
-    nameImg: "/streamName.svg",
-  },
-  {
-    id: 5,
-    name: "docker.",
-    img: "/dock.svg",
-    nameImg: "/dockerName.svg",
-  },
-];
-
 export const workExperience = [
   {
     id: 1,
-    title: "Full-Stack Developer Intern",
-    desc: "Worked on the development of a web application with Throughwave (Thailand) Co.,Ltd. 05/05/24 - 19/07/24",
+    title: "Full-Stack Developer Intern At Throughwave",
+    desc: "Worked on the development of a web application with Throughwave (Thailand) Co.,Ltd. 05/05/2024 - 19/07/2024",
     className: "md:col-span-2",
-    thumbnail: "/portfolio-xun/exp1.svg",
+    thumbnail: "/portfolio-xun/Throughwave.jpeg",
+  },
+  {
+    id: 2,
+    title: "Full-Stack Developer Intern At Builk One Group",
+    desc: "Worked on the development of a CRM system with BUILK ONE GROUP COMPANY LIMITED. 13/05/2025 - 25/07/2025",
+    className: "md:col-span-2",
+    thumbnail: "/portfolio-xun/builk.jpeg",
   },
 ];
 
