@@ -2,6 +2,7 @@
 
 import { FaLocationArrow } from "react-icons/fa6";
 import { useState } from "react";
+import { useRouter } from "next/navigation";
 
 import { projects } from "@/data";
 import { PinContainer } from "./ui/Pin";
@@ -9,6 +10,7 @@ import Image from "next/image";
 
 const RecentProjects = () => {
   const [selectedTag, setSelectedTag] = useState<string>("All");
+  const router = useRouter();
 
   const handleTagClick = (tag: string) => {
     setSelectedTag(tag);
@@ -62,8 +64,8 @@ const RecentProjects = () => {
                 href={`/projects/${item.id}`} // Link remains the same
               >
                 <div
-                  className="relative flex items-center justify-center sm:w-96 w-[80vw] overflow-hidden h-[20vh] lg:h-[30vh] mb-10"
-                  onClick={() => window.open(`${item.link}`, "_blank")}
+                  className="relative flex items-center justify-center sm:w-96 w-[80vw] overflow-hidden h-[20vh] lg:h-[30vh] mb-10 cursor-pointer"
+                  onClick={() => router.push(`/projects/${item.id}`)}
                 >
                   <div
                     className="relative w-full h-full overflow-hidden lg:rounded-3xl"
