@@ -6,7 +6,7 @@ import { Button } from "./ui/MovingBorders";
 
 const Experience = () => {
   return (
-    <div className="py-20 w-full">
+    <section id="experience" className="py-20 w-full">
       <h1 className="heading">
         My <span className="text-purple">work experience</span>
       </h1>
@@ -30,27 +30,42 @@ const Experience = () => {
             // remove bg-white dark:bg-slate-900
             className="flex-1 text-black dark:text-white border-neutral-200 dark:border-slate-800"
           >
-            <div className="flex lg:flex-row flex-col lg:items-center p-3 py-6 md:p-5 lg:p-10 gap-2">
-              <Image
-                src={card.thumbnail}
-                alt={card.thumbnail}
-                className="lg:w-32 md:w-20 w-16 rounded-lg"
-                width={500}
-                height={500}
-              />
-              <div className="lg:ms-5">
-                <h1 className="text-start text-xl md:text-2xl font-bold">
-                  {card.title}
-                </h1>
-                <p className="text-start text-white-100 mt-3 font-semibold">
-                  {card.desc}
+            <div className="flex lg:flex-row flex-col lg:items-start p-3 py-6 md:p-5 lg:p-10 gap-5 text-start w-full">
+              <div className="flex-shrink-0 flex items-center justify-center">
+                <Image
+                  src={card.thumbnail}
+                  alt={card.thumbnail}
+                  className="lg:w-32 md:w-20 w-16 rounded-lg object-cover"
+                  width={500}
+                  height={500}
+                />
+              </div>
+              <div className="lg:ms-5 flex-1 w-full">
+                <div className="flex flex-col md:flex-row justify-between items-start md:items-center gap-2">
+                  <h1 className="text-start text-xl md:text-2xl font-bold text-white">
+                    {card.title} <span className="text-purple">@ {card.company}</span>
+                  </h1>
+                  <span className="text-sm font-semibold text-purple bg-purple/10 px-3 py-1 rounded-full">
+                    {card.duration}
+                  </span>
+                </div>
+                <div className="text-sm text-gray-400 mt-1 font-medium">
+                  {card.location}
+                </div>
+                <p className="text-white-100 mt-3 font-semibold text-sm italic">
+                  {card.companyDesc}
                 </p>
+                <ul className="list-disc list-outside ml-5 mt-4 space-y-2 text-white-100/80 text-sm font-normal">
+                  {card.desc.map((bullet, idx) => (
+                    <li key={idx}>{bullet}</li>
+                  ))}
+                </ul>
               </div>
             </div>
           </Button>
         ))}
       </div>
-    </div>
+    </section>
   );
 };
 

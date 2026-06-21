@@ -36,9 +36,22 @@ const ProjectDetails = ({ params }: { params: { id: string } }) => {
         <FloatingNav navItems={navItems} />
 
         <div className="grid grid-cols-1 lg:grid-cols-2 gap-16 w-full mt-20">
-          {/* RIGHT COLUMN (Mobile: Top, Desktop: Right) - Carousel */}
+          {/* RIGHT COLUMN (Mobile: Top, Desktop: Right) - Carousel or Video */}
           <div className="flex items-center justify-center h-full w-full order-1 lg:order-2">
-            <ProjectCarousel images={displayImages} />
+            {project.video ? (
+              <div className="relative w-full aspect-video rounded-3xl overflow-hidden border border-white/[0.1] shadow-2xl">
+                <video
+                  src={project.video}
+                  autoPlay
+                  loop
+                  muted
+                  playsInline
+                  className="w-full h-full object-cover"
+                />
+              </div>
+            ) : (
+              <ProjectCarousel images={displayImages} />
+            )}
           </div>
 
           {/* LEFT COLUMN (Mobile: Bottom, Desktop: Left) - Text Content */}

@@ -113,22 +113,57 @@ export const InfiniteMovingCards = ({
               <h2 className="text-center text-lg md:text-2xl font-semibold text-white">
                 {item.quote}
               </h2>
-              <div className="relative z-20 mt-6 flex flex-row items-center justify-center">
-                {/* add this div for the profile img */}
-                <div className="flex space-x-4 gap-1">
-                  {item.icons.map((icon, iconIdx) => (
-                    <div key={iconIdx} className="flex items-center space-x-2">
-                      <img
-                        src={icon}
-                        alt={`icon-${iconIdx}`}
-                        className="w-6 h-6"
-                      />
-                      <span className="text-sm text-white">
-                        {item.iconsName[iconIdx]}
-                      </span>
+              <div className="relative z-20 mt-6 flex flex-col items-center justify-center gap-3">
+                {item.icons.length > 4 ? (
+                  <>
+                    <div className="flex flex-row items-center justify-center gap-x-6 gap-y-2">
+                      {item.icons.slice(0, Math.ceil(item.icons.length / 2)).map((icon, iconIdx) => (
+                        <div key={iconIdx} className="flex items-center space-x-2 shrink-0">
+                          <img
+                            src={icon}
+                            alt={`icon-${iconIdx}`}
+                            className="w-6 h-6 object-contain"
+                          />
+                          <span className="text-sm text-white">
+                            {item.iconsName[iconIdx]}
+                          </span>
+                        </div>
+                      ))}
                     </div>
-                  ))}
-                </div>
+                    <div className="flex flex-row items-center justify-center gap-x-6 gap-y-2">
+                      {item.icons.slice(Math.ceil(item.icons.length / 2)).map((icon, iconIdx) => {
+                        const originalIdx = Math.ceil(item.icons.length / 2) + iconIdx;
+                        return (
+                          <div key={originalIdx} className="flex items-center space-x-2 shrink-0">
+                            <img
+                              src={icon}
+                              alt={`icon-${originalIdx}`}
+                              className="w-6 h-6 object-contain"
+                            />
+                            <span className="text-sm text-white">
+                              {item.iconsName[originalIdx]}
+                            </span>
+                          </div>
+                        );
+                      })}
+                    </div>
+                  </>
+                ) : (
+                  <div className="flex flex-row items-center justify-center gap-x-6 gap-y-2">
+                    {item.icons.map((icon, iconIdx) => (
+                      <div key={iconIdx} className="flex items-center space-x-2 shrink-0">
+                        <img
+                          src={icon}
+                          alt={`icon-${iconIdx}`}
+                          className="w-6 h-6 object-contain"
+                        />
+                        <span className="text-sm text-white">
+                          {item.iconsName[iconIdx]}
+                        </span>
+                      </div>
+                    ))}
+                  </div>
+                )}
               </div>
             </blockquote>
           </li>

@@ -1,5 +1,6 @@
 export const navItems = [
   { name: "About", link: "#about" },
+  { name: "Experience", link: "#experience" },
   { name: "Projects", link: "#projects" },
   { name: "Tech-Stack", link: "#Tech-Stack" },
   { name: "Contact", link: "#contact" },
@@ -40,6 +41,28 @@ export const gridItems = [
 ];
 
 export const projects = [
+  // --- Highlighted AI Projects ---
+  {
+    id: 11,
+    title: "Project AiQ : Intelligence That Drives Execution",
+    des: "An AI-driven Knowledge Management Platform with SCB Tech X to automate enterprise information retrieval.",
+    longDescription:
+      "Project Capstone CO-OP with SCB Tech X.\n\n" +
+      "- Developed an AI-driven Knowledge Management platform using a Retrieval-Augmented Generation (RAG) architecture and Agentic Search to automate information retrieval across fragmented enterprise data sources.\n" +
+      "- Collaborated with a cross-functional team to deliver a full-stack, end-to-end AI platform tailored to the specific enterprise business use cases of SCB Tech X, ensuring alignment with organizational workflows.",
+    img: "/portfolio-xun/ProjectAIQ.png",
+    images: ["/portfolio-xun/ProjectAIQ.png"],
+    video: "/portfolio-xun/AIQ-DEMO.mp4",
+    iconLists: [
+      "/portfolio-xun/next.svg",
+      "/portfolio-xun/ts.svg",
+      "/portfolio-xun/FastAPI.svg",
+      "/portfolio-xun/python.png",
+    ],
+    link: "https://github.com/XunFlowerrr",
+    tags: ["SCB Tech X", "RAG", "Agentic Search", "Generative AI", "Full Stack"],
+  },
+
   // --- Web Application ---
   {
     id: 1,
@@ -232,6 +255,10 @@ export const testimonials = [
       "/portfolio-xun/html.png",
       "/portfolio-xun/css.png",
       "/portfolio-xun/shad.svg",
+      "/portfolio-xun/angular-svgrepo-com.svg",
+      "/portfolio-xun/vite-svgrepo-com.svg",
+      "/portfolio-xun/expo-svgrepo-com.svg",
+      "/portfolio-xun/reactjs-svgrepo-com.svg",
     ],
     iconsName: [
       "React",
@@ -242,12 +269,54 @@ export const testimonials = [
       "HTML",
       "CSS",
       "Shadcn-ui",
+      "Angular",
+      "Vite",
+      "Expo",
+      "React-Native",
     ],
   },
   {
     quote: "Back-end",
-    icons: ["/portfolio-xun/nodejs-icon.svg", "/portfolio-xun/Express.svg"],
-    iconsName: ["NodeJS", "Express"],
+    icons: [
+      "/portfolio-xun/nodejs-icon.svg",
+      "/portfolio-xun/Express.svg",
+      "/portfolio-xun/Spring_Boot.svg",
+      "/portfolio-xun/dotnet-svgrepo-com.svg",
+      "/portfolio-xun/FastAPI.svg",
+    ],
+    iconsName: [
+      "NodeJS",
+      "Express",
+      "Java Spring Boot",
+      ".NET C#",
+      "FastAPI",
+    ],
+  },
+  {
+    quote: "Database",
+    icons: [
+      "/portfolio-xun/postgresql.svg",
+      "/portfolio-xun/oracle-svgrepo-com.svg",
+      "/portfolio-xun/mongodb.svg",
+    ],
+    iconsName: [
+      "PostgreSQL",
+      "Oracle",
+      "MongoDB",
+    ],
+  },
+  {
+    quote: "Tools",
+    icons: [
+      "/portfolio-xun/git.svg",
+      "/portfolio-xun/github-142-svgrepo-com.svg",
+      "/portfolio-xun/dock.svg",
+    ],
+    iconsName: [
+      "Git",
+      "GitHub",
+      "Docker",
+    ],
   },
   {
     quote: "Android",
@@ -274,17 +343,30 @@ export const testimonials = [
 export const workExperience = [
   {
     id: 1,
-    title: "Full-Stack Developer Intern At Throughwave",
-    desc: "Worked on the development of a web application with Throughwave (Thailand) Co.,Ltd. 05/05/2024 - 19/07/2024",
+    title: "Full Stack Developer Intern",
+    company: "BUILK ONE GROUP",
+    duration: "05/2025 - 07/2025",
+    location: "Rungrojthanakul Building, Huai Khwang, Bangkok 10310",
+    companyDesc: "Leading Southeast Asian construction-tech startup digitizing the construction and real estate ecosystem.",
+    desc: [
+      "Successfully integrated the company's proprietary CRM system with QuickBooks, overcoming complex API mismatches and ensuring seamless cross-platform data synchronization.",
+      "Collaborated closely with QA testers to conduct integration testing, ensuring the system aligned with product specifications and business requirements.",
+    ],
     className: "md:col-span-2",
-    thumbnail: "/portfolio-xun/Throughwave.jpeg",
+    thumbnail: "/portfolio-xun/builk.jpeg",
   },
   {
     id: 2,
-    title: "Full-Stack Developer Intern At Builk One Group",
-    desc: "Worked on the development of a CRM system with BUILK ONE GROUP COMPANY LIMITED. 13/05/2025 - 25/07/2025",
+    title: "Full Stack Developer Intern",
+    company: "THROUGH WAVE (THAILAND)",
+    duration: "05/2024 - 07/2024",
+    location: "Yannawa, Sathorn, Bangkok 10120",
+    companyDesc: "Leading digital infrastructure and AI-driven cloud solutions provider empowering enterprise and public sector digital transformation.",
+    desc: [
+      "Developed and maintained web applications for a media posting portal, allowing users to upload and manage media content across various platforms in a single interface.",
+    ],
     className: "md:col-span-2",
-    thumbnail: "/portfolio-xun/builk.jpeg",
+    thumbnail: "/portfolio-xun/Throughwave.jpeg",
   },
 ];
 
